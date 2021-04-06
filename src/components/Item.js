@@ -37,7 +37,7 @@ const Item = ({
 	ratioSizes,
 	setRatioSizes,
 	setSomePictureParams,
-	setClicked,
+	setImageClicked,
 	ratioFormatsProp,
 	imagesMinWidthProp,
 	imagesMaxWidthProp,
@@ -46,7 +46,7 @@ const Item = ({
 	borderWidthProp,
 	previewLoaderStatusProp,
 	defaultPreviewSrc,
-	defaultFullSrc,
+	defaultFullImageSrc,
 	...props
 }) => {
 	const {
@@ -75,7 +75,7 @@ const Item = ({
 	}, []);
 	const openGalleryItem = useCallback(() => {
 		setSomePictureParams({
-			'src': srcFull || defaultFullSrc,
+			'src': srcFull || defaultFullImageSrc,
 			'srcset': srcSetFull,
 			'sizes': sizesFull,
 			'alt': altFull,
@@ -84,7 +84,7 @@ const Item = ({
 			'object-fit': objectPositionFull,
 			'loading': loadingFull
 		});
-		setClicked(true);
+		setImageClicked(true);
 	});
 	const changeFormat = useCallback((format, sizes) => {
 		const params = {

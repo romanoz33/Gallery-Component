@@ -16,10 +16,10 @@ export default (() => {
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
 		<Box height="150px" />
-		<Components.Gallery>
-			<Override slot="Item 0" srcFull="https://images.unsplash.com/photo-1611095787946-fd5e3ed08285?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=2000" srcPreview="https://images.unsplash.com/photo-1611095787946-fd5e3ed08285?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=2000" />
-			<Override slot="Item 1" srcFull="https://images.unsplash.com/photo-1614788679832-7879205af178?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=2000" srcPreview="https://images.unsplash.com/photo-1614788679832-7879205af178?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=2000" />
-			<Override slot="Item 2" srcFull="https://images.unsplash.com/photo-1614626169098-380f51607eb2?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" srcPreview="https://images.unsplash.com/photo-1614626169098-380f51607eb2?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" />
+		<Components.Gallery ratioFormatsProp="16:9" galleryItemCountProp="9" fullLoaderStatusProp>
+			<Override slot="Item 0" srcFull="https://steamuserimages-a.akamaihd.net/ugc/940586530515504757/CDDE77CB810474E1C07B945E40AE4713141AFD76/" srcPreview="https://images.unsplash.com/photo-1617677601210-042468459115?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" />
+			<Override slot="Item 1" srcFull="https://images.unsplash.com/photo-1616952593956-60591e777488?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" srcPreview="https://images.unsplash.com/photo-1614788679832-7879205af178?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=2000" />
+			<Override slot="Item 2" srcFull="https://images.unsplash.com/photo-1616952593956-60591e777488?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" srcPreview="https://images.unsplash.com/photo-1614626169098-380f51607eb2?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" />
 			<Override slot="Item" />
 			<Override slot="Item 3" srcFull="https://images.unsplash.com/photo-1614783509000-ccf2306e1a71?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" srcPreview="https://images.unsplash.com/photo-1614783509000-ccf2306e1a71?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" />
 			<Override slot="Item 4" srcFull="https://images.unsplash.com/photo-1614631446501-abcf76949eca?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" srcPreview="https://images.unsplash.com/photo-1614631446501-abcf76949eca?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" />
@@ -407,7 +407,15 @@ export default (() => {
 					margin="0 0px 0 0px"
 					flex="2"
 				>
-					<Strong>
+					<Strong
+						data-q-widget-type="PRIMITIVE"
+						overflow-wrap="normal"
+						word-break="normal"
+						white-space="normal"
+						text-indent="0"
+						text-overflow="clip"
+						hyphens="manual"
+					>
 						auto{" "}
 					</Strong>
 					- Пропорции изображений не меняются.
@@ -577,7 +585,7 @@ export default (() => {
 		<Text text-align="left" color="#000000" font="22px/1.2 --fontFamily-serifGaramond">
 			Дочерний элемент галереи имеет следующие пропсы:{" "}
 		</Text>
-		<Box>
+		<Box margin="0px 0px 50px 0px">
 			<Box display="flex">
 				<Text
 					text-align="left"
@@ -845,7 +853,7 @@ export default (() => {
 		<Text text-align="left" color="#000000" font="22px/1.2 --fontFamily-serifGaramond">
 			Пример галереи с разными размерами изображений
 		</Text>
-		<Components.Gallery loaderFormatProp="Все сразу" ratioFormatsProp="1:1">
+		<Components.Gallery loaderFormatProp="Все сразу" ratioFormatsProp="9:16" borderWidthProp="3">
 			<Override slot="Item 0" srcFull="https://images.unsplash.com/photo-1611095787946-fd5e3ed08285?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=2000" srcPreview="https://images.unsplash.com/photo-1611095787946-fd5e3ed08285?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=2000" columsCountProp="2" />
 			<Override slot="Item 1" srcFull="https://images.unsplash.com/photo-1614788679832-7879205af178?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=2000" srcPreview="https://images.unsplash.com/photo-1614788679832-7879205af178?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=2000" />
 			<Override slot="Item 2" srcFull="https://images.unsplash.com/photo-1614626169098-380f51607eb2?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" srcPreview="https://images.unsplash.com/photo-1614626169098-380f51607eb2?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" />
@@ -862,6 +870,7 @@ export default (() => {
 			<Override slot="Item 6" srcFull="https://images.unsplash.com/photo-1614712257486-8a238b88bbdc?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" srcPreview="https://images.unsplash.com/photo-1614712257486-8a238b88bbdc?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" columsCountProp="4" />
 			<Override slot="Item 7" srcFull="https://images.unsplash.com/photo-1614630536429-74e43f302c31?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" srcPreview="https://images.unsplash.com/photo-1614630536429-74e43f302c31?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&h=2000" />
 		</Components.Gallery>
+		<Box height="146px" />
 		<Link
 			font={"--capture"}
 			font-size={"10px"}

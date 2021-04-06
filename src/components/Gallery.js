@@ -5,7 +5,7 @@ import Item from './Item';
 import Lightbox from './Lightbox';
 const windowHeightSize = 1.5;
 const defaultPreviewSrc = 'https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=6&m=1222357475&s=170667a&w=0&h=sCVQ6Qaut-zK8EdXE4s70nmmXRQeK8FmooCqvE32spQ=';
-const defaultFullSrc = 'http://placehold.it/800';
+const defaultFullImageSrc = 'https://via.placeholder.com/800';
 
 const loadImage = url => new Promise(resolve => {
 	const img = document.createElement('img');
@@ -15,39 +15,39 @@ const loadImage = url => new Promise(resolve => {
 
 const overrides = {
 	'Wrapper': {
-		'kind': 'Box'
+		kind: 'Box'
 	},
 	'Item': {
-		'kind': 'Item',
-		'props': {
-			'cursor': 'pointer'
+		kind: 'Item',
+		props: {
+			cursor: 'pointer'
 		}
 	},
 	'Lightbox': {
-		'kind': 'Lightbox',
-		'props': {
+		kind: 'Lightbox',
+		props: {
 			'height': 0,
 			'min-height': 0
 		}
 	},
 	'Button More': {
-		'kind': 'Button',
-		'props': {
+		kind: 'Button',
+		props: {
 			'margin': '0 auto',
 			'display': 'block',
 			'margin-top': '20px'
 		}
 	},
 	'Button More :Visible': {
-		'kind': 'Button',
-		'props': {
-			'display': 'block'
+		kind: 'Button',
+		props: {
+			display: 'block'
 		}
 	},
 	'Button More :Hidden': {
-		'kind': 'Button',
-		'props': {
-			'display': 'none'
+		kind: 'Button',
+		props: {
+			display: 'none'
 		}
 	}
 };
@@ -104,7 +104,7 @@ const Gallery = ({
 
 	const [itemsLoadingCount, setItemsLoadingCount] = useState(); // Нажата та ли картинка
 
-	const [clicked, setClicked] = useState(false); // Все параметры определенной картинки
+	const [imageClicked, setImageClicked] = useState(false); // Все параметры определенной картинки
 
 	const [somePictureParams, setSomePictureParams] = useState({}); // Размеры галереи
 
@@ -281,7 +281,7 @@ const Gallery = ({
 		ratioSizes={ratioSizes}
 		setRatioSizes={setRatioSizes}
 		setSomePictureParams={setSomePictureParams}
-		setClicked={setClicked}
+		setImageClicked={setImageClicked}
 		ratioFormatsProp={ratioFormatsProp}
 		imagesMinWidthProp={imagesMinWidthProp}
 		imagesMaxWidthProp={imagesMaxWidthProp}
@@ -290,7 +290,7 @@ const Gallery = ({
 		borderWidthProp={borderWidthProp}
 		previewLoaderStatusProp={previewLoaderStatusProp}
 		defaultPreviewSrc={defaultPreviewSrc}
-		defaultFullSrc={defaultFullSrc}
+		defaultFullImageSrc={defaultFullImageSrc}
 	/>);
 	return <Box {...rest}>
 		<Box
@@ -321,9 +321,9 @@ const Gallery = ({
 			isZoom={isZoom}
 			setZoom={setZoom}
 			offScrollProp={offScrollProp}
-			clicked={clicked}
-			setClicked={setClicked}
-			defaultFullSrc={defaultFullSrc}
+			imageClicked={imageClicked}
+			setImageClicked={setImageClicked}
+			defaultFullImageSrc={defaultFullImageSrc}
 			fullLoaderStatusProp={fullLoaderStatusProp}
 		/>
 		 
